@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заселение в общежитие</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page-shell">
+        <header class="intro">
+            <span class="eyebrow"><span class="eyebrow-mark"></span>ПОРТАЛ ОБЩЕЖИТИЯ</span>
+            <h1>Заселение<br>в общежитие</h1>
+            <p>Проверка условий размещения</p>
+            <div class="intro-note" aria-hidden="true">
+                <span class="note-line"></span>
+                <span>СТУДЕНТ&nbsp; · &nbsp;КОРПУС&nbsp; · &nbsp;КОМНАТА</span>
+            </div>
+        </header>
+
+        <section class="form-panel" aria-labelledby="formTitle">
+            <div class="panel-heading">
+                <span class="panel-index">01</span>
+                <h2 id="formTitle">Данные для проверки</h2>
+            </div>
+
+            <form id="checkForm">
+                <div class="field">
+                    <label for="studentId">ID студента</label>
+                    <input type="text" id="studentId" placeholder="Например, 3" inputmode="numeric" required>
+                </div>
+
+                <div class="field">
+                    <label for="buildingNum">Номер корпуса</label>
+                    <input type="text" id="buildingNum" placeholder="Например, 2" inputmode="numeric" required>
+                </div>
+
+                <div class="field">
+                    <label for="roomNum">Номер комнаты</label>
+                    <input type="text" id="roomNum" placeholder="Например, 102" inputmode="numeric" required>
+                </div>
+
+                <button type="submit"><span>Проверить заселение</span><span class="button-arrow" aria-hidden="true">→</span></button>
+            </form>
+
+            <div id="result" role="status" aria-live="polite" aria-atomic="true"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
